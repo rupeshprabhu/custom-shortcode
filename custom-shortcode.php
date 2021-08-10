@@ -24,7 +24,7 @@ function custom_shortcode_posts() {
     if($latest_post->have_posts()){ //checking if we have posts
         while($latest_post->have_posts()){ //loop through all the posts
             $latest_post->the_post();//increamenting the posts
-            echo '<h2>'.get_the_title().'</h2>';
+            echo '<a href='.get_the_permalink().'>''<h2>'.get_the_title().'</h2></a><br /><p>'.the_excerpt(__('(more…)')).'</p>';
         }
         wp_reset_postdata(); //restore our original posts data
     }
