@@ -1,0 +1,1 @@
+<h2><?php echo $old_post->post_title; ?></h2>

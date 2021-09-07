@@ -10,7 +10,7 @@
  * Text Domain: shortcoder
  * Domain Path: /languages
  *
- * @since 0.0.0
+ * @since 1.0.0
  * @package category
  */
 
@@ -24,13 +24,21 @@ function custom_shortcode_posts() {
 							'order'          => 'DESC',
 						);
 						$latest_post = new WP_Query( $args ); // Creating WP Query.
-						if ( $latest_post->have_posts() ) { // Checking if we have posts.
-							while ( $latest_post->have_posts() ) { // loop through all the posts.
-								$latest_post->the_post(); // increamenting the posts.
-								echo '<h2><a href = ' .get_the_permalink(). '>' .get_the_title().' </h2></a> ';
-								echo '<p><a href='.get_the_permalink().'>'.get_the_post_thumbnail().'</a></p>';
-								echo '<p>'.the_excerpt(__('(more…)')).'</p>';
-							}
-							wp_reset_postdata(); // restore our original posts data.
+						foreach( $latest_post->posts as $old_post ) {
+							include 'templates/custom-shortcode.php';
 						}
+						/**
+						*if ( $latest_post->have_posts() ) { // Checking if we have posts.
+						*	while ( $latest_post->have_posts() ) { // loop through all the posts.
+						*		$latest_post->the_post(); // increamenting the posts.
+						*		echo '<h2><a href = ' .get_the_permalink(). '>' .get_the_title().' </h2></a> ';
+						*		echo '<p><a href='.get_the_permalink().'>'.get_the_post_thumbnail().'</a></p>';
+						*		echo '<p>'.the_excerpt(__('(more…)')).'</p>';
+						*	}
+						*	wp_reset_postdata(); // restore our original posts data.
+						*}
+						*else {
+						*	echo 'No posts are published.';
+						*}
+						*/
 }
