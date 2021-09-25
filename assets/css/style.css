@@ -1,0 +1,26 @@
+.article1 {
+    overflow: auto;
+    background: red;
+    margin: 0 1rem 1.5rem 1rem;
+    position: relative;
+    width: auto;
+}
+
+.para1 {
+    color: blue;
+}
+
+.heading {
+    color: yellow
+}
+
+.img1 {
+    float: left;
+    margin: 1rem;
+}
+
+.a1 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
