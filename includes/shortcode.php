@@ -31,7 +31,7 @@ function custom_shortcode_posts() {
 	);
 	$latest_post = new WP_Query( $args ); // Creating WP Query.
 	foreach ( $latest_post->posts as $old_post ) {
-		include 'templates/custom-shortcode.php';
+		include CUSTOMSHORTCODE_PATH . 'templates/custom-shortcode.php';
 	}
 }
 
@@ -45,7 +45,7 @@ function shortcode_style() {
 	// Passing paramerters to register wp_register_style function.
 	wp_register_style(
 		'style',
-		CS_URL . 'assets/css/style.css',
+		CUSTOMSHORTCODE_URL . 'assets/css/style.css',
 		array(),
 		1,
 		'all'

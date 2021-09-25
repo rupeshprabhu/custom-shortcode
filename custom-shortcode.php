@@ -21,14 +21,14 @@ defined( 'ABSPATH' ) || exit;
  *
  * @since 0.1.0
  */
-define( 'CUSTOMSHORTCODE_PATH', plugin_dir_path( __FILE__ ) );
+define( 'CUSTOMSHORTCODE_PATH', trailingslashit( plugin_dir_path( __FILE__ ) ) );
 
 /**
  * Plugin's url path
  *
  * @since 0.1.0
  */
-define( 'CUSTOMSHORTCODE_URL', plugin_dir_url( __FILE__ ) );
+define( 'CUSTOMSHORTCODE_URL', trailingslashit( plugin_dir_url( __FILE__ ) ) );
 
 /**
  * Includes the main functionality file.

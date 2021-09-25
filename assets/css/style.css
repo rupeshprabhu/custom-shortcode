@@ -1,17 +1,18 @@
 .article1 {
     overflow: auto;
-    background: red;
+    background: #f9f9f9;
     margin: 0 1rem 1.5rem 1rem;
     position: relative;
-    width: auto;
 }
 
 .para1 {
-    color: blue;
+    color: rgb(0, 204, 255);
+    margin: 2rem auto 5rem;
 }
 
 .heading {
-    color: yellow
+    color: rgb(39, 10, 141);
+    margin: 0rem auto 5rem;
 }
 
 .img1 {
