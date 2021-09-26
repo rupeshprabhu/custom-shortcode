@@ -6,13 +6,14 @@
 }
 
 .para1 {
-    color: rgb(0, 204, 255);
-    margin: 2rem auto 5rem;
+    color: rgb(119, 1, 1);
+    margin: 2rem auto 1rem;
 }
 
 .heading {
     color: rgb(39, 10, 141);
-    margin: 0rem auto 5rem;
+    margin: 0rem auto 1rem;
+    font-size: 24pt;
 }
 
 .img1 {
